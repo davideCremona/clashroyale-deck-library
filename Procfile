@@ -1,1 +1,1 @@
-web: gunicorn app:cladeli
+web: gunicorn cladeli:cladeli
