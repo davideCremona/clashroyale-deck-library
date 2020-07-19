@@ -23,6 +23,19 @@ def update_all_cards():
     return "updated cards"
 
 
+# ---------------------------------------------------------------------
+#                                                                 DECKS
+# ---------------------------------------------------------------------
+@app.route('/decks')
+def show_decks():
+    return "unimplemented yet"
+
+
+@app.route('/deck/create')
+def create_deck():
+    return "unimplemented yet"
+
+
 @app.route('/deck/<int:deck_id>')
 def show_deck(deck_id):
     deck = cards.get_deck_by_id(deck_id)
@@ -30,6 +43,49 @@ def show_deck(deck_id):
     for card in deck['cards']:
         deck_link += "{};".format(card['id'])
     return render_template("deck.html", deck=deck, deck_link=deck_link)
+
+
+@app.route('/deck/<int:deck_id>/update')
+def update_deck(deck_id):
+    return "unimplemented yet"
+
+
+@app.route('/deck/<int:deck_id>/delete')
+def delete_deck(deck_id):
+    return "unimplemented yet"
+
+
+# ---------------------------------------------------------------------
+#                                                            CATEGORIES
+# ---------------------------------------------------------------------
+@app.route('/categories')
+def show_categories():
+    """ Lists all categories """
+    return "unimplemented yet"
+
+
+@app.route('/category/create')
+def create_category(id_category):
+    """ Page for creating a category """
+    return "unimplemented yet"
+
+
+@app.route('/category/<int:category_id>')
+def show_category(category_id):
+    """ Shows decks of the selected category """
+    return "unimplemented yet"
+
+
+@app.route('/category/<int:category_id>/update')
+def update_category(id_category):
+    """ Page for updating a category """
+    return "unimplemented yet"
+
+
+@app.route('/category/<int:category_id>/delete')
+def delete_category(id_category):
+    """ Delete selected category """
+    return "unimplemented yet"
 
 
 if __name__ == '__main__':

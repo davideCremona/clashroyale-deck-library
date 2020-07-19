@@ -30,11 +30,17 @@ def get_decks_path():
 
 
 def get_cards_dict():
-    return json.load(open(get_cards_path(), 'r'))
+    cards_dict = {}
+    if os.path.exists(get_cards_path()):
+        cards_dict = json.load(open(get_cards_path(), 'r'))
+    return cards_dict
 
 
 def get_decks_dict():
-    return json.load(open(get_decks_path(), 'r'))
+    decks_dict = {}
+    if os.path.exists(get_decks_path()):
+        decks_dict = json.load(open(get_decks_path(), 'r'))
+    return decks_dict
 
 
 def update_all_cards(new_cards):

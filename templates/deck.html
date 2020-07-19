@@ -1,11 +1,15 @@
 <div>
-    <b>{{deck['name']}}</b> <br/>
-    {{deck['avg_elixir']}} <br/>
-    {{deck['categories']}} <br/>
+    <img src="{{deck['cards'][0]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][1]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][2]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][3]['icon']}}" style="width: 69; height: 82"/> <br/>
+    <img src="{{deck['cards'][4]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][5]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][6]['icon']}}" style="width: 69; height: 82"/>
+    <img src="{{deck['cards'][7]['icon']}}" style="width: 69; height: 82"/> <br/>
 
-    {% for card in deck['cards'] %}
-        <img src="{{card['icon']}}"/>
-    {% endfor %}
+    <b>{{deck['name']}}</b> avg elixir: {{deck['avg_elixir']}} <br/>
+    categories: {{deck['categories']}} <br/>
 
     <a href="{{deck_link}}">copy deck</a> <br/>
     <img src="{{qrcode(deck_link)}}"/>
