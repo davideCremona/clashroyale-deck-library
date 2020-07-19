@@ -1,0 +1,12 @@
+<div>
+    <b>{{deck['name']}}</b> <br/>
+    {{deck['avg_elixir']}} <br/>
+    {{deck['categories']}} <br/>
+
+    {% for card in deck['cards'] %}
+        <img src="{{card['icon']}}"/>
+    {% endfor %}
+
+    <a href="{{deck_link}}">copy deck</a> <br/>
+    <img src="{{qrcode(deck_link)}}"/>
+</div>

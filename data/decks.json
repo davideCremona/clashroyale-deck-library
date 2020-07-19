@@ -1,0 +1,10 @@
+{
+  "decks": [
+    {
+      "name": "pippo",
+      "avg_elixir": 0.0,
+      "categories": [],
+      "cards": ["Ice Wizard", "Knight", "Rocket", "Skeletons", "Tesla", "The Log", "Tornado", "X-Bow"]
+    }
+  ]
+}
